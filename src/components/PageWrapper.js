@@ -6,9 +6,6 @@ import { Navbar } from './Navbar';
 export const PageWrapper = ({ children }) => {
   return (
     <>
-    <br />
-    <br />
-    <br />
       <Flex
         as="main"
         justifyContent="center"

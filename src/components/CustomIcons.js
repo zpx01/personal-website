@@ -1,5 +1,6 @@
 import { Icon } from "@chakra-ui/icons";
 import { FiGithub, FiLinkedin, FiMail } from "react-icons/fi";
+import { FaMediumM } from "react-icons/fa";
 import { IconContext } from "react-icons";
 
 export const BBTIcon = (props) => (
@@ -126,6 +127,14 @@ export const LinkedInIcon = (props) => (
   <IconContext.Provider value={{ size: "1.5em" }}>
     <div>
       <FiLinkedin />
+    </div>
+  </IconContext.Provider>
+);
+
+export const MediumIcon = (props) => (
+  <IconContext.Provider value={{ size: "1.5em" }}>
+    <div>
+      <FaMediumM />
     </div>
   </IconContext.Provider>
 );

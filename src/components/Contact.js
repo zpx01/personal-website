@@ -6,7 +6,7 @@ import {
   Flex,
   Center,
 } from "@chakra-ui/react";
-import { GithubIcon, LinkedInIcon, MailIcon } from "./CustomIcons";
+import { GithubIcon, LinkedInIcon, MailIcon, MediumIcon } from "./CustomIcons";
 
 const SOCIAL_LINKS = [
   {
@@ -20,6 +20,12 @@ const SOCIAL_LINKS = [
     icon: LinkedInIcon,
     href: "https://www.linkedin.com/in/zeeshan-patel/",
     title: "LinkedIn",
+  },
+  {
+    aria: "Medium",
+    icon: MediumIcon,
+    href: "https://zpx01.medium.com/",
+    title: "Medium",
   },
   {
     aria: "email",
@@ -48,13 +54,9 @@ const Contact = () => {
       <Flex
         flexDirection="column"
         justifyContent="flex-start"
-        alignItems="flex-start"
+        alignItems="center"
         maxWidth="700px"
       >
-        {/* <Center>
-          <Text>Feel free to reach out and I will get back to you ASAP!</Text>
-        </Center>
-        <br /> */}
         <Center>
             {SOCIAL_LINKS.map(getIcon)}
         </Center>

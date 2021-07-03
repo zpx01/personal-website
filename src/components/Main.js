@@ -15,11 +15,37 @@ import Projects from "./Projects";
 import Experience from "./Experience";
 import Contact from "./Contact";
 import Education from "./Education";
+import "./animate.css";
 const Section = styled(Flex)`
-  flex-direction: column;
-  justify-content: flex-start;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 20rem;
+  padding-bottom: 20rem;
+  // max-width: 75rem;
+`;
+
+const ProjectSection = styled(Flex)`
+  display: flex;
   align-items: flex-start;
-  max-width: 800px;
+  justify-content: center;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 11rem;
+  padding-bottom: 20rem;
+  // max-width: 75rem;
+`;
+const EduSection = styled(Flex)`
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 11rem;
+  padding-bottom: 25rem;
+  // max-width: 75rem;
 `;
 
 const SectionHeading = ({ children }) => (
@@ -33,18 +59,16 @@ export const Main = () => {
 
   return (
     <>
+      <div id="home">
+        <></>
+      </div>
       <PageWrapper>
         <Stack
           as="main"
-          spacing={8}
           justifyContent="center"
-          alignItems="flex-start"
-          m="0 auto 4rem auto"
+          alignItems="center"
           maxWidth="800px"
         >
-          <div id="home"><br /></div>
-          <br />
-          <br />
           <Section>
             <Fade in>
               <Typing startDelay={200}>
@@ -54,59 +78,46 @@ export const Main = () => {
               </Typing>
             </Fade>
           </Section>
-          <br />
-          <div id="about">
-            <br />
-          </div>
-          <br />
+          <div id="about" />
           <Section>
             <Fade in>
-              <SectionHeading>About Me</SectionHeading>
+              <SectionHeading>👨‍💻 About Me</SectionHeading>
               <Text color={secondaryTextColor[colorMode]}>
-                A freshman at UC Berkeley studying Computer Science and
-                Statistics currently working at the Advanced Bioimaging Center
-                as a computational research intern. I like hiking, debate, and
-                traveling.
+                I'm a freshman at UC Berkeley studying Computer Science and
+                Statistics. Currently, I am working at the UC Berkeley Advanced
+                Bioimaging Center as a computational research intern. I'm interested
+                in the intersection between artificial intelligence, finance, and 
+                entrepreneurship.
               </Text>
             </Fade>
           </Section>
-          <div id="projects">
-            <br />
-          </div>
-          <br />
-          <Section>
+          <div id="projects"></div>
+          <ProjectSection>
             <Fade in>
-              <SectionHeading>Projects</SectionHeading>
+              <SectionHeading>📱 Projects</SectionHeading>
               <Projects />
             </Fade>
-          </Section>
-          <div id="experience">
-            <br />
-          </div>
-          <br />
-          <Section>
+          </ProjectSection>
+          <div id="experience"></div>
+          <ProjectSection>
             <Fade in>
-              <SectionHeading>Experience</SectionHeading>
+              <SectionHeading>💻 Experience</SectionHeading>
               <Experience />
             </Fade>
-          </Section>
-          <div id="education">
-            <br />
-          </div>
-          <br />
-          <Section>
+          </ProjectSection>
+          <div id="education"></div>
+          <EduSection>
             <Fade in>
-              <SectionHeading>Education</SectionHeading>
+              <SectionHeading>📚 Education</SectionHeading>
               <Education />
             </Fade>
-          </Section>
-          <div id="contact">
-            <br />
-          </div>
-          <br />
+          </EduSection>
+          <div id="contact"></div>
           <Section>
             <Fade in>
-              <SectionHeading>Contact</SectionHeading>
+              <SectionHeading>
+                <span class="wave">👋</span>  Contact
+              </SectionHeading>
               <br />
               <Contact />
             </Fade>

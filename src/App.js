@@ -8,7 +8,7 @@ function App() {
     <>
       <ChakraProvider>
         <Navbar />
-          <Main />
+        <Main />
       </ChakraProvider>
     </>
   );
