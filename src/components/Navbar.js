@@ -97,14 +97,6 @@ export function Navbar() {
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.9 }}
                 >
-                  <Link to="education" spy={true} smooth={true}>
-                    <Button variant="ghost">Education</Button>
-                  </Link>
-                </motion.button>
-                <motion.button
-                  whileHover={{ scale: 1.1 }}
-                  whileTap={{ scale: 0.9 }}
-                >
                   <Link to="contact" spy={true} smooth={true}>
                     <Button variant="ghost">Contact</Button>
                   </Link>
@@ -163,9 +155,6 @@ export function Navbar() {
                   </Button>
                   <Button w="full" variant="ghost">
                     Experience
-                  </Button>
-                  <Button w="full" variant="ghost">
-                    Education
                   </Button>
                   <Button w="full" variant="ghost">
                     Contact

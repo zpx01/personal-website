@@ -5,11 +5,11 @@ export const Footer = () => {
   return (
     <>
       <footer>
-        <Center>
+        {/* <Center>
           <Link href="/resume.pdf">
             <Text color={secondaryTextColor[colorMode]}>> resume</Text>
           </Link>
-        </Center>
+        </Center> */}
       </footer>
       <br />
       <br />

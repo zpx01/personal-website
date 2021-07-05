@@ -6,6 +6,8 @@ import {
   Stack,
   Fade,
   Box,
+  Button,
+  Center,
 } from "@chakra-ui/react";
 import Typing from "react-typing-animation";
 import styled from "@emotion/styled";
@@ -14,7 +16,7 @@ import { secondaryTextColor } from "./darkMode";
 import Projects from "./Projects";
 import Experience from "./Experience";
 import Contact from "./Contact";
-import Education from "./Education";
+import { Link } from "react-scroll";
 import "./animate.css";
 const Section = styled(Flex)`
   display: flex;
@@ -35,16 +37,6 @@ const ProjectSection = styled(Flex)`
   padding-right: 1rem;
   padding-top: 11rem;
   padding-bottom: 20rem;
-  // max-width: 75rem;
-`;
-const EduSection = styled(Flex)`
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  padding-top: 11rem;
-  padding-bottom: 25rem;
   // max-width: 75rem;
 `;
 
@@ -75,6 +67,12 @@ export const Main = () => {
                 <Heading mb={6} as="h1" size="3xl">
                   Hi, I'm Zeeshan Patel
                 </Heading>
+                <Center>
+                  <Link to="about" spy={true} smooth={true}>
+                    <br />
+                    <Button>Learn More</Button>
+                  </Link>
+                </Center>
               </Typing>
             </Fade>
           </Section>
@@ -85,9 +83,9 @@ export const Main = () => {
               <Text color={secondaryTextColor[colorMode]}>
                 I'm a freshman at UC Berkeley studying Computer Science and
                 Statistics. Currently, I am working at the UC Berkeley Advanced
-                Bioimaging Center as a computational research intern. I'm interested
-                in the intersection between artificial intelligence, finance, and 
-                entrepreneurship.
+                Bioimaging Center as a computational research intern. I'm specifically
+                interested in the intersection between artificial intelligence,
+                finance, and entrepreneurship.
               </Text>
             </Fade>
           </Section>
@@ -105,21 +103,16 @@ export const Main = () => {
               <Experience />
             </Fade>
           </ProjectSection>
-          <div id="education"></div>
-          <EduSection>
-            <Fade in>
-              <SectionHeading>📚 Education</SectionHeading>
-              <Education />
-            </Fade>
-          </EduSection>
           <div id="contact"></div>
           <Section>
             <Fade in>
               <SectionHeading>
-                <span class="wave">👋</span>  Contact
+                <span class="wave">👋</span> Contact
               </SectionHeading>
               <br />
               <Contact />
+              <br />
+              <br />
             </Fade>
           </Section>
         </Stack>
