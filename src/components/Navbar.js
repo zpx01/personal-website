@@ -28,8 +28,8 @@ const NavContainer = styled(Flex)`
 `;
 
 export function Navbar() {
-  const { colorMode, toggleColorMode } = useColorMode(navBgColor.dark);
-  const bg = useColorModeValue(navBgColor.light, navBgColor.dark);
+    const { colorMode, toggleColorMode } = useColorMode();
+    const bg = useColorModeValue(navBgColor.light, navBgColor.dark);
   const mobileNav = useDisclosure();
 
   return (
