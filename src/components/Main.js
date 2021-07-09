@@ -63,7 +63,6 @@ export const Main = () => {
         >
           <Section>
             <Fade in>
-              <Typing startDelay={200}>
                 <Heading mb={6} as="h1" size="3xl">
                   Hi, I'm Zeeshan Patel
                 </Heading>
@@ -73,7 +72,6 @@ export const Main = () => {
                     <Button>Learn More</Button>
                   </Link>
                 </Center>
-              </Typing>
             </Fade>
           </Section>
           <div id="about" />
