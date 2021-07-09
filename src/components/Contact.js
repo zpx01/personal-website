@@ -1,8 +1,6 @@
 import {
   Link,
   IconButton,
-  Text,
-  useColorMode,
   Flex,
   Center,
 } from "@chakra-ui/react";
@@ -47,7 +45,6 @@ const getIcon = ({ aria, icon, href, title }) => (
   </Link>
 );
 const Contact = () => {
-  const { colorMode } = useColorMode();
 
   return (
     <>

@@ -1,75 +1,65 @@
-import { Box, SimpleGrid } from '@chakra-ui/react';
-import { m, LazyMotion, domAnimation } from 'framer-motion';
-import { useMediaQuery } from 'react-responsive';
+import { Box, SimpleGrid } from "@chakra-ui/react";
+import { m, LazyMotion, domAnimation } from "framer-motion";
+import { useMediaQuery } from "react-responsive";
 
-import ProjectCard from './ProjectCard';
+import ProjectCard from "./ProjectCard";
 import {
-  BBTIcon,
   HTNIcon,
-  VisionMotionIcon,
-  SignSenseIcon
-} from './CustomIcons';
+  MentalHealth,
+  Microscope,
+  SpaceShip,
+} from "./CustomIcons";
 
 const PROJECTS = [
   {
-    title: 'SignSense',
+    title: "DeepEducation",
     description:
-      'Real-Time American Sign Language Interpreter with over 85% accuracy',
-    href: 'https://github.com/Jhong098/SignSense',
-    icon: SignSenseIcon,
-    tags: [
-      { text: 'Python', color: 'cyan' },
-      { text: 'Tensorflow', color: 'blue' },
-      { text: 'Keras', color: 'purple' }
-    ]
-  },
-  {
-    title: 'hackthenorth.com',
-    description:
-      'Website for the largest hackathon in Canada with 30,000 monthly visitors',
-    href: 'https://2019.hackthenorth.com',
+      "Web application that uses AI to translate video content to break language barriers in education.",
+    href: "https://devpost.com/software/deepeducation-wvj9ef",
     icon: HTNIcon,
     tags: [
-      { text: 'React', color: 'cyan' },
-      { text: 'Typescript', color: 'blue' },
-      { text: 'Styled-Components', color: 'gray' }
-    ]
+      { text: "Python", color: "cyan" },
+      { text: "React", color: "red" },
+      { text: "OpenAI", color: "blue" },
+      { text: "GCP / Firebase", color: "purple" },
+    ],
   },
   {
-    title: 'Hacker Applications',
+    title: "Flow",
     description:
-      'Hack the North 2019 hacker application experience that processed 8000+ applications in total',
-    href: 'https://your.hackthenorth.com/',
-    icon: HTNIcon,
+      "Web application designed to alleviate stress while maximizing productivity.",
+    href: "https://devpost.com/software/flow-ms1vbg",
+    icon: MentalHealth,
     tags: [
-      { text: 'React', color: 'cyan' },
-      { text: 'Typescript', color: 'blue' },
-      { text: 'Styled-Components', color: 'gray' }
-    ]
+      { text: "Python", color: "cyan" },
+      { text: "React", color: "red" },
+      { text: "OpenAI", color: "gray" },
+      { text: "GCP / Firebase", color: "purple" },
+    ],
   },
   {
-    title: 'Hackioca',
+    title: "Malarial Cell Detector",
     description:
-      "Hack the North 2019 April Fool's Prank that attracted thousands of gullible hackers to sign-up",
-    href: 'https://hackioca.com',
-    icon: BBTIcon,
+      "A convolutional neural network aimed at classifying infected and uninfected malarial cells.",
+    href: "https://github.com/zpx01/auto_nuclear_seg",
+    icon: Microscope,
     tags: [
-      { text: 'React', color: 'cyan' },
-      { text: 'Typescript', color: 'blue' },
-      { text: 'Styled-Components', color: 'gray' }
-    ]
+      { text: "Python", color: "cyan" },
+      { text: "TensorFlow", color: "blue" },
+      { text: "Keras", color: "gray" },
+    ],
   },
   {
-    title: 'Vision Motion',
+    title: "Pulsar Classifier",
     description:
-      'Mobile app that uses the camera to track an object and graph position, velocity, and acceleration',
-    href: 'https://visionmotion.williamqin.com/',
-    icon: VisionMotionIcon,
+      "A machine learning model based on k-Nearest-Neighbor for classifying pulsars using radio emission pattern data.",
+    href: "https://github.com/zpx01/pulsar-classifier",
+    icon: SpaceShip,
     tags: [
-      { text: 'Android', color: 'green' },
-      { text: 'OpenCV', color: 'orange' }
-    ]
-  }
+      { text: "Python", color: "cyan" },
+      { text: "Scikit-Learn", color: "blue" },
+    ],
+  },
 ];
 
 const container = {
@@ -77,14 +67,14 @@ const container = {
   show: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.1
-    }
-  }
+      staggerChildren: 0.1,
+    },
+  },
 };
 
 const listItem = {
   hidden: { opacity: 0 },
-  show: { opacity: 1 }
+  show: { opacity: 1 },
 };
 
 const MotionBox = m(Box);

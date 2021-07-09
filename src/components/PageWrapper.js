@@ -1,7 +1,5 @@
-import { useColorMode, Flex } from '@chakra-ui/react';
-import { primaryTextColor, bgColor } from './darkMode';
+import { Flex } from '@chakra-ui/react';
 import { Footer } from './Footer';
-import { Navbar } from './Navbar';
 
 export const PageWrapper = ({ children }) => {
   return (

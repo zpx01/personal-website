@@ -5,10 +5,10 @@ import {
   Flex,
   Stack,
   Fade,
-  Box,
   Button,
   Center,
 } from "@chakra-ui/react";
+import { DownButton } from "./CustomIcons";
 import Typing from "react-typing-animation";
 import styled from "@emotion/styled";
 import { PageWrapper } from "./PageWrapper";
@@ -80,27 +80,51 @@ export const Main = () => {
           <Section>
             <Fade in>
               <SectionHeading>👨‍💻 About Me</SectionHeading>
+              <hr />
+              <br />
               <Text color={secondaryTextColor[colorMode]}>
                 I'm a freshman at UC Berkeley studying Computer Science and
                 Statistics. Currently, I am working at the UC Berkeley Advanced
-                Bioimaging Center as a computational research intern. I'm specifically
-                interested in the intersection between artificial intelligence,
-                finance, and entrepreneurship.
+                Bioimaging Center as a computational research intern. I'm
+                specifically interested in the intersection between artificial
+                intelligence, finance, and entrepreneurship.
               </Text>
+              <Center>
+                <Link to="projects" spy={true} smooth={true}>
+                  <br />
+                  <DownButton />
+                </Link>
+              </Center>
             </Fade>
           </Section>
           <div id="projects"></div>
           <ProjectSection>
             <Fade in>
               <SectionHeading>📱 Projects</SectionHeading>
+              <hr />
+              <br />
               <Projects />
+              <Center>
+              <Link to="experience" spy={true} smooth={true}>
+                  <br />
+                  <DownButton />
+                </Link>
+              </Center>
             </Fade>
           </ProjectSection>
           <div id="experience"></div>
           <ProjectSection>
             <Fade in>
               <SectionHeading>💻 Experience</SectionHeading>
+              <hr />
+              <br />
               <Experience />
+              <Center>
+              <Link to="contact" spy={true} smooth={true}>
+                  <br />
+                  <DownButton />
+                </Link>
+              </Center>
             </Fade>
           </ProjectSection>
           <div id="contact"></div>

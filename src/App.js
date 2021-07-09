@@ -1,4 +1,4 @@
-import { ChakraProvider, Center } from "@chakra-ui/react";
+import { ChakraProvider } from "@chakra-ui/react";
 import { Navbar } from "./components/Navbar";
 import { Main } from "./components/Main";
 import "./App.css";
