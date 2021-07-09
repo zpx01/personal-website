@@ -9,10 +9,10 @@ import {
   Center,
 } from "@chakra-ui/react";
 import { DownButton } from "./CustomIcons";
-import Typing from "react-typing-animation";
 import styled from "@emotion/styled";
 import { PageWrapper } from "./PageWrapper";
 import { secondaryTextColor } from "./darkMode";
+import { bgColor } from "./darkMode";
 import Projects from "./Projects";
 import Experience from "./Experience";
 import Contact from "./Contact";
@@ -47,7 +47,7 @@ const SectionHeading = ({ children }) => (
 );
 
 export const Main = () => {
-  const { colorMode } = useColorMode();
+  const { colorMode } = useColorMode(bgColor.dark);
 
   return (
     <>
