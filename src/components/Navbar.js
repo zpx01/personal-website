@@ -28,8 +28,8 @@ const NavContainer = styled(Flex)`
 `;
 
 export function Navbar() {
-    const { colorMode, toggleColorMode } = useColorMode();
-    const bg = useColorModeValue(navBgColor.light, navBgColor.dark);
+  const { colorMode, toggleColorMode } = useColorMode();
+  const bg = useColorModeValue(navBgColor.light, navBgColor.dark);
   const mobileNav = useDisclosure();
 
   return (
@@ -144,21 +144,31 @@ export function Navbar() {
                     aria-label="Close menu"
                     onClick={mobileNav.onClose}
                   />
-                  <Button w="full" variant="ghost">
-                    Home
-                  </Button>
-                  <Button w="full" variant="ghost">
-                    About
-                  </Button>
-                  <Button w="full" variant="ghost">
-                    Projects
-                  </Button>
-                  <Button w="full" variant="ghost">
-                    Experience
-                  </Button>
-                  <Button w="full" variant="ghost">
-                    Contact
-                  </Button>
+                  <Link to="home" spy={true} smooth={true}>
+                    <Button w="full" variant="ghost">
+                      Home
+                    </Button>
+                  </Link>
+                  <Link to="about" spy={true} smooth={true}>
+                    <Button w="full" variant="ghost">
+                      About
+                    </Button>
+                  </Link>
+                  <Link to="projects" spy={true} smooth={true}>
+                    <Button w="full" variant="ghost">
+                      Projects
+                    </Button>
+                  </Link>
+                  <Link to="experience" spy={true} smooth={true}>
+                    <Button w="full" variant="ghost">
+                      Experience
+                    </Button>
+                  </Link>
+                  <Link to="contact" spy={true} smooth={true}>
+                    <Button w="full" variant="ghost">
+                      Contact
+                    </Button>
+                  </Link>
                   <IconButton
                     aria-label="toggle dark mode"
                     icon={colorMode === "dark" ? <SunIcon /> : <MoonIcon />}
