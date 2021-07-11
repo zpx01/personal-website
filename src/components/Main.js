@@ -8,25 +8,41 @@ import {
   Fade,
   Button,
   Center,
+  IconButton,
+  SimpleGrid,
+  Box,
 } from "@chakra-ui/react";
 import { DownButton } from "./CustomIcons";
 import styled from "@emotion/styled";
 import { PageWrapper } from "./PageWrapper";
 import { secondaryTextColor } from "./darkMode";
-import { bgColor } from "./darkMode";
 import Projects from "./Projects";
 import Experience from "./Experience";
 import Contact from "./Contact";
 import { Link } from "react-scroll";
 import Typist from "react-typist";
+import { SunIcon, MoonIcon } from "@chakra-ui/icons";
+import { motion } from "framer-motion";
 import "./animate.css";
+
 const Section = styled(Flex)`
   display: flex;
   align-items: center;
   justify-content: center;
   padding-left: 1rem;
   padding-right: 1rem;
-  padding-top: 20rem;
+  padding-top: 15rem;
+  padding-bottom: 20rem;
+  // max-width: 75rem;
+`;
+
+const HomeSection = styled(Flex)`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 11rem;
   padding-bottom: 20rem;
   // max-width: 75rem;
 `;
@@ -49,8 +65,7 @@ const SectionHeading = ({ children }) => (
 );
 
 export const Main = () => {
-  const { colorMode } = useColorMode(bgColor.dark);
-
+  const { colorMode, toggleColorMode } = useColorMode();
   const [count, setCount] = useState(1);
 
   useEffect(() => {
@@ -59,9 +74,6 @@ export const Main = () => {
 
   return (
     <>
-      <div id="home">
-        <></>
-      </div>
       <PageWrapper>
         <Stack
           as="main"
@@ -69,13 +81,15 @@ export const Main = () => {
           alignItems="center"
           maxWidth="800px"
         >
-          <Section>
+          <div id="home"></div>
+          <HomeSection>
             <Fade in>
               <Center>
                 <Heading mb={4} as="h1" size="2xl">
                   Hi, I'm
                 </Heading>
               </Center>
+              <br />
               <Center>
                 <Heading mb={4} as="h1" size="2xl">
                   Zeeshan Patel
@@ -83,8 +97,15 @@ export const Main = () => {
               </Center>
               <br />
               <Center>
-                <Text fontSize="lg" fontWeight="bold">I'm a &nbsp;</Text>
-                <Text as="mark" fontSize="lg" fontWeight="bold" bgGradient="linear(to-r, blue.200, blue.100)">
+                <Text fontSize="lg" fontWeight="bold">
+                  I'm a &nbsp;
+                </Text>
+                <Text
+                  as="mark"
+                  fontSize="lg"
+                  fontWeight="bold"
+                  bgGradient="linear(to-r, blue.200, blue.100)"
+                >
                   {count ? (
                     <Typist
                       avgTypingDelay={50}
@@ -92,8 +113,8 @@ export const Main = () => {
                     >
                       <span>Computer Science Student</span>
                       <Typist.Backspace count={24} delay={1500} />
-                      <span>Software Engineer</span>
-                      <Typist.Backspace count={17} delay={1500} />
+                      <span>Entrepreneur</span>
+                      <Typist.Backspace count={12} delay={1500} />
                       <span>AI Researcher</span>
                       <Typist.Backspace count={13} delay={1500} />
                     </Typist>
@@ -102,14 +123,34 @@ export const Main = () => {
                   )}
                 </Text>
               </Center>
-              <Center>
-                <Link to="about" spy={true} smooth={true}>
-                  <br />
-                  <Button>Learn More</Button>
-                </Link>
-              </Center>
+              <br />
+              <br />
+                <Center>
+                  <motion.button
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.9 }}
+                  >
+                    <Link to="about" spy={true} smooth={true}>
+                      <Button>Learn More</Button>
+                    </Link>
+                  </motion.button>
+                </Center>
+                <br />
+                <Center>
+                  <motion.button
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.9 }}
+                  >
+                    <IconButton
+                      aria-label="toggle dark mode"
+                      icon={colorMode === "dark" ? <SunIcon /> : <MoonIcon />}
+                      onClick={toggleColorMode}
+                      isRound={true}
+                    />
+                  </motion.button>
+                </Center>
             </Fade>
-          </Section>
+          </HomeSection>
           <div id="about" />
           <Section>
             <Fade in>
@@ -126,7 +167,12 @@ export const Main = () => {
               <Center>
                 <Link to="projects" spy={true} smooth={true}>
                   <br />
-                  <DownButton />
+                  <motion.button
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.9 }}
+                  >
+                    <DownButton />
+                  </motion.button>
                 </Link>
               </Center>
             </Fade>
@@ -141,7 +187,12 @@ export const Main = () => {
               <Center>
                 <Link to="experience" spy={true} smooth={true}>
                   <br />
-                  <DownButton />
+                  <motion.button
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.9 }}
+                  >
+                    <DownButton />
+                  </motion.button>
                 </Link>
               </Center>
             </Fade>
@@ -156,7 +207,12 @@ export const Main = () => {
               <Center>
                 <Link to="contact" spy={true} smooth={true}>
                   <br />
-                  <DownButton />
+                  <motion.button
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.9 }}
+                  >
+                    <DownButton />
+                  </motion.button>
                 </Link>
               </Center>
             </Fade>
