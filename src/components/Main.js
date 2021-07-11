@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import {
   useColorMode,
   Heading,
@@ -17,6 +18,7 @@ import Projects from "./Projects";
 import Experience from "./Experience";
 import Contact from "./Contact";
 import { Link } from "react-scroll";
+import Typist from "react-typist";
 import "./animate.css";
 const Section = styled(Flex)`
   display: flex;
@@ -49,6 +51,12 @@ const SectionHeading = ({ children }) => (
 export const Main = () => {
   const { colorMode } = useColorMode(bgColor.dark);
 
+  const [count, setCount] = useState(1);
+
+  useEffect(() => {
+    setCount(1);
+  }, [count]);
+
   return (
     <>
       <div id="home">
@@ -63,15 +71,43 @@ export const Main = () => {
         >
           <Section>
             <Fade in>
-                <Heading mb={6} as="h1" size="3xl">
-                  Hi, I'm Zeeshan Patel
+              <Center>
+                <Heading mb={4} as="h1" size="2xl">
+                  Hi, I'm
                 </Heading>
-                <Center>
-                  <Link to="about" spy={true} smooth={true}>
-                    <br />
-                    <Button>Learn More</Button>
-                  </Link>
-                </Center>
+              </Center>
+              <Center>
+                <Heading mb={4} as="h1" size="2xl">
+                  Zeeshan Patel
+                </Heading>
+              </Center>
+              <br />
+              <Center>
+                <Text fontSize="lg" fontWeight="bold">I'm a &nbsp;</Text>
+                <Text as="mark" fontSize="lg" fontWeight="bold" bgGradient="linear(to-r, blue.200, blue.100)">
+                  {count ? (
+                    <Typist
+                      avgTypingDelay={50}
+                      onTypingDone={() => setCount(0)}
+                    >
+                      <span>Computer Science Student</span>
+                      <Typist.Backspace count={24} delay={1500} />
+                      <span>Software Engineer</span>
+                      <Typist.Backspace count={17} delay={1500} />
+                      <span>AI Researcher</span>
+                      <Typist.Backspace count={13} delay={1500} />
+                    </Typist>
+                  ) : (
+                    ""
+                  )}
+                </Text>
+              </Center>
+              <Center>
+                <Link to="about" spy={true} smooth={true}>
+                  <br />
+                  <Button>Learn More</Button>
+                </Link>
+              </Center>
             </Fade>
           </Section>
           <div id="about" />
@@ -103,7 +139,7 @@ export const Main = () => {
               <br />
               <Projects />
               <Center>
-              <Link to="experience" spy={true} smooth={true}>
+                <Link to="experience" spy={true} smooth={true}>
                   <br />
                   <DownButton />
                 </Link>
@@ -118,7 +154,7 @@ export const Main = () => {
               <br />
               <Experience />
               <Center>
-              <Link to="contact" spy={true} smooth={true}>
+                <Link to="contact" spy={true} smooth={true}>
                   <br />
                   <DownButton />
                 </Link>
