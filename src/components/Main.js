@@ -97,9 +97,6 @@ export const Main = () => {
               </Center>
               <br />
               <Center>
-                <Text fontSize="lg" fontWeight="bold">
-                  I'm a &nbsp;
-                </Text>
                 <Text
                   as="mark"
                   fontSize="lg"
