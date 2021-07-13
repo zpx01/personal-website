@@ -8,9 +8,7 @@ import {
   Fade,
   Button,
   Center,
-  IconButton,
-  SimpleGrid,
-  Box,
+  IconButton
 } from "@chakra-ui/react";
 import { DownButton } from "./CustomIcons";
 import styled from "@emotion/styled";
