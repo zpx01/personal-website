@@ -38,6 +38,10 @@ const TIMELINE_ITEMS = [
                   Developing GUI to streamline microscope data manipulation and
                   preprocessing pipeline.
                 </ListItem>
+                <ListItem>
+                  Researching on feature segmentation in bioimages to detect and
+                  identify various cell organelles and structures.
+                </ListItem>
               </Stack>
             </UnorderedList>
           </>
@@ -83,7 +87,10 @@ const TIMELINE_ITEMS = [
                   education to disadvantaged students in the United States,
                   Canada, India, Pakistan, and Sri Lanka.
                 </ListItem>
-                <ListItem>Taught 600+ students in three years.</ListItem>
+                <ListItem>
+                  Taught programming and advanced mathematics 600+ students in
+                  three years.
+                </ListItem>
               </Stack>
             </UnorderedList>
           </>
@@ -124,11 +131,12 @@ const TIMELINE_ITEMS = [
             <UnorderedList>
               <Stack mb={2}>
                 <ListItem>
-                  Created real estate data analysis web application.
+                  Created real estate data analysis dashboard using Python
+                  Flask, Plotly, and React.
                 </ListItem>
                 <ListItem>
-                  Developed deep learning model to forecast real estate prices
-                  across U.S.
+                  Integrated LSTM recurrent neural network for time series
+                  forecasting of real estate prices.
                 </ListItem>
               </Stack>
             </UnorderedList>
