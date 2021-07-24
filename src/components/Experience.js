@@ -48,8 +48,8 @@ const TIMELINE_ITEMS = [
         ),
       },
       {
-        time: () => "Feb 2020 - Present",
-        title: () => "Co-Founder",
+        time: () => "Feb 2020 - May 2020",
+        title: () => "Software Engineering Intern",
         place: () => "Equinox AI",
         desc: () => (
           <>
