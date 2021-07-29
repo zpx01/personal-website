@@ -47,27 +47,27 @@ const TIMELINE_ITEMS = [
           </>
         ),
       },
-      {
-        time: () => "Feb 2020 - May 2020",
-        title: () => "Software Engineering Intern",
-        place: () => "Equinox AI",
-        desc: () => (
-          <>
-            <UnorderedList>
-              <Stack mb={2}>
-                <ListItem>
-                  Developed no-code machine learning solutions to enhance data
-                  analytics.
-                </ListItem>
-                <ListItem>
-                  Engineered custom web applications for clients to optimize
-                  predictive analysis workflow.
-                </ListItem>
-              </Stack>
-            </UnorderedList>
-          </>
-        ),
-      },
+      // {
+      //   time: () => "Feb 2020 - May 2020",
+      //   title: () => "Software Engineering Intern",
+      //   place: () => "Equinox AI",
+      //   desc: () => (
+      //     <>
+      //       <UnorderedList>
+      //         <Stack mb={2}>
+      //           <ListItem>
+      //             Developed no-code machine learning solutions to enhance data
+      //             analytics.
+      //           </ListItem>
+      //           <ListItem>
+      //             Engineered custom web applications for clients to optimize
+      //             predictive analysis workflow.
+      //           </ListItem>
+      //         </Stack>
+      //       </UnorderedList>
+      //     </>
+      //   ),
+      // },
       {
         time: () => "Feb 2018 - Present",
         title: () => "Founder and CEO",
