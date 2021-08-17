@@ -153,7 +153,7 @@ export const Main = () => {
               <hr />
               <br />
               <Text color={secondaryTextColor[colorMode]}>
-                I'm a freshman at UC Berkeley studying Computer Science and
+                I'm a student at UC Berkeley studying Computer Science and
                 Statistics. Currently, I am working at the UC Berkeley Advanced
                 Bioimaging Center as a computational research intern. I'm
                 specifically interested in the intersection between artificial
