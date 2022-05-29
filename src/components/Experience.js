@@ -16,6 +16,28 @@ const TIMELINE_ITEMS = [
   {
     items: [
       {
+        time: () => "May 2022 - Present",
+        title: () => "SWE Intern",
+        place: () => (
+          <Text as="u">
+            <Link href="https://verkada.com" isExternal>
+              Verkada
+            </Link>
+          </Text>
+        ),
+        desc: () => (
+          <>
+            <UnorderedList>
+              <Stack mb={2}>
+                <ListItem>
+                  Building cool products 😎
+                </ListItem>
+              </Stack>
+            </UnorderedList>
+          </>
+        ),
+      },
+      {
         time: () => "May 2020 - Present",
         title: () => "Computational Research Intern",
         place: () => (
@@ -30,44 +52,37 @@ const TIMELINE_ITEMS = [
             <UnorderedList>
               <Stack mb={2}>
                 <ListItem>
-                  Created novel deep learning tool for 3D live-cell membrane
-                  detection and segmentation in bioimages obtained using
-                  Adaptive Optics Lattice Light Sheet Microscopes (AO-LLSM).
+                  Created novel deep learning tool for multi-feature object detection in 3D bioimages obtained using Adaptive Optics Lattice Light Sheet Microscopes (AO-LLSM).
                 </ListItem>
                 <ListItem>
-                  Developing GUI to streamline microscope data manipulation and
-                  preprocessing pipeline.
-                </ListItem>
-                <ListItem>
-                  Researching on feature segmentation in bioimages to detect and
-                  identify various cell organelles and structures.
+                  Developed full-stack web application to streamline image analysis process.
                 </ListItem>
               </Stack>
             </UnorderedList>
           </>
         ),
       },
-      // {
-      //   time: () => "Feb 2020 - May 2020",
-      //   title: () => "Software Engineering Intern",
-      //   place: () => "Equinox AI",
-      //   desc: () => (
-      //     <>
-      //       <UnorderedList>
-      //         <Stack mb={2}>
-      //           <ListItem>
-      //             Developed no-code machine learning solutions to enhance data
-      //             analytics.
-      //           </ListItem>
-      //           <ListItem>
-      //             Engineered custom web applications for clients to optimize
-      //             predictive analysis workflow.
-      //           </ListItem>
-      //         </Stack>
-      //       </UnorderedList>
-      //     </>
-      //   ),
-      // },
+      {
+        time: () => "Feb 2020 - June 2020",
+        title: () => "SWE Intern",
+        place: () => "Equinox AI",
+        desc: () => (
+          <>
+            <UnorderedList>
+              <Stack mb={2}>
+                <ListItem>
+                  Developed no-code machine learning solutions to enhance data
+                  analytics.
+                </ListItem>
+                <ListItem>
+                  Engineered custom web applications for clients to optimize
+                  predictive analysis workflow.
+                </ListItem>
+              </Stack>
+            </UnorderedList>
+          </>
+        ),
+      },
       {
         time: () => "Feb 2018 - Present",
         title: () => "Founder and CEO",
@@ -124,7 +139,7 @@ const TIMELINE_ITEMS = [
       },
       {
         time: () => "May 2019 - Aug 2019",
-        title: () => "Software Engineer Intern",
+        title: () => "SWE Intern",
         place: () => <Text>Micronest Technologies</Text>,
         desc: () => (
           <>
@@ -223,6 +238,11 @@ const Experience = () => {
             </Text>
             <br />
             <Stack ml={2} mb={2} mt={2}>
+            <ListItem>
+                <Text color={secondaryTextColor[colorMode]}>
+                Dean's Honors List - Top 10% of L&S Undergraduates
+                </Text>
+              </ListItem>
               <ListItem>
                 <Text color={secondaryTextColor[colorMode]}>
                   USA Computing Olympiad – Gold
@@ -242,7 +262,7 @@ const Experience = () => {
                       <ListItem>
                         <Text color={secondaryTextColor[colorMode]}>
                           CA DECA State Champion – International Business Plan
-                          (IBP), 1st Place, ICDC 2020 Qualifier
+                          (IBP), ICDC 2020 Qualifier
                         </Text>
                       </ListItem>
                       <ListItem>
