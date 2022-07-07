@@ -1,6 +1,6 @@
 export const bgColor = {
     light: 'white',
-    dark: 'gray.900'
+    dark: 'gray.900' 
   };
   export const primaryTextColor = {
     light: 'black',
