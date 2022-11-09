@@ -15,7 +15,7 @@ const PROJECTS = [
     title: "DeepEducation",
     description:
       "Web application that uses AI to translate video content to break language barriers in education.",
-    href: "https://devpost.com/software/deepeducation-wvj9ef",
+    href: "https://github.com/zpx01/DeepEducation",
     icon: HTNIcon,
     tags: [
       { text: "Python", color: "cyan" },
