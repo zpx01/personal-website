@@ -18,7 +18,6 @@ import Projects from "./Projects";
 import Experience from "./Experience";
 import Contact from "./Contact";
 import { Link } from "react-scroll";
-import Typist from "react-typist";
 import { SunIcon, MoonIcon } from "@chakra-ui/icons";
 import { motion } from "framer-motion";
 import "./animate.css";
