@@ -50,7 +50,7 @@ const TIMELINE_ITEMS = [
             <UnorderedList>
               <Stack mb={2}>
                 <ListItem>
-                  Special Project - Applied ML
+                  Special Projects - Applied ML
                 </ListItem>
               </Stack>
             </UnorderedList>
