@@ -16,8 +16,28 @@ const TIMELINE_ITEMS = [
   {
     items: [
       {
-        time: () => "May 2022 - Present",
-        title: () => "SWE Intern",
+        time: () => "Summer 2023",
+        title: () => "Incoming ML Engineering Intern",
+        place: () => (
+          <Text as="u">
+            Apple
+          </Text>
+        ),
+        desc: () => (
+          <>
+            <UnorderedList>
+              <Stack mb={2}>
+                <ListItem>
+                  Information Intelligence
+                </ListItem>
+              </Stack>
+            </UnorderedList>
+          </>
+        ),
+      },
+      {
+        time: () => "May 2022 - Aug 2022",
+        title: () => "Software Engineering Intern",
         place: () => (
           <Text as="u">
             <Link href="https://verkada.com" isExternal>
@@ -30,7 +50,7 @@ const TIMELINE_ITEMS = [
             <UnorderedList>
               <Stack mb={2}>
                 <ListItem>
-                  Building cool products 😎
+                  Special Project - Applied ML
                 </ListItem>
               </Stack>
             </UnorderedList>
@@ -64,7 +84,7 @@ const TIMELINE_ITEMS = [
       },
       {
         time: () => "Feb 2020 - June 2020",
-        title: () => "SWE Intern",
+        title: () => "Software Engineering Intern",
         place: () => "Equinox AI",
         desc: () => (
           <>
@@ -139,7 +159,7 @@ const TIMELINE_ITEMS = [
       },
       {
         time: () => "May 2019 - Aug 2019",
-        title: () => "SWE Intern",
+        title: () => "Software Engineering Intern",
         place: () => <Text>Micronest Technologies</Text>,
         desc: () => (
           <>

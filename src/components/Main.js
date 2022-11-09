@@ -94,7 +94,7 @@ export const Main = () => {
                 </Heading>
               </Center>
               <br />
-              <Center>
+              {/* <Center>
                 <Text
                   as="mark"
                   fontSize="lg"
@@ -117,8 +117,8 @@ export const Main = () => {
                     ""
                   )}
                 </Text>
-              </Center>
-              <br />
+              </Center> */}
+              {/* <br /> */}
               <br />
                 <Center>
                   <motion.button
@@ -154,8 +154,7 @@ export const Main = () => {
               <br />
               <Text color={secondaryTextColor[colorMode]}>
                 I'm a sophomore at UC Berkeley studying Computer Science and
-                Statistics. Currently, I am a Software Engineering intern at Verkada. My interests
-                are in machine learning, signal processing, and computer vision.
+                Statistics. My interests are largely in machine learning, signal processing, computer vision, and probability theory.
               </Text>
               <Center>
                 <Link to="projects" spy={true} smooth={true}>
