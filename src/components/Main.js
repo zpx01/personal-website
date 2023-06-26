@@ -152,8 +152,8 @@ export const Main = () => {
               <hr />
               <br />
               <Text color={secondaryTextColor[colorMode]}>
-                I'm a sophomore at UC Berkeley studying Computer Science and
-                Statistics. My interests are largely in machine learning, signal processing, computer vision, and probability theory.
+                I'm a rising junior at UC Berkeley studying Computer Science and
+                Statistics. My interests are largely in machine learning, computer vision, algorithms, and probability theory.
               </Text>
               <Center>
                 <Link to="projects" spy={true} smooth={true}>
@@ -225,3 +225,5 @@ export const Main = () => {
     </>
   );
 };
+
+export default Main;

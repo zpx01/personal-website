@@ -11,13 +11,14 @@ import {
   IconButton,
   CloseButton,
   useColorMode,
+  Link
 } from "@chakra-ui/react";
 import { SunIcon, MoonIcon } from "@chakra-ui/icons";
 import styled from "@emotion/styled";
 import { navBgColor } from "./darkMode";
 import { AiOutlineMenu } from "react-icons/ai";
 import { motion } from "framer-motion";
-import { Link } from "react-scroll";
+import { Link as RSLink} from "react-scroll";
 
 const NavContainer = styled(Flex)`
   position: sticky;
@@ -52,7 +53,7 @@ export function Navbar() {
         >
           <Flex alignItems="center" justifyContent="space-between" mx="auto">
             <chakra.h1 fontSize="2xl" fontWeight="extrabold" ml="2">
-              Zeeshan Patel
+              
             </chakra.h1>
             <HStack display="flex" alignItems="center" spacing={1}>
               <HStack
@@ -65,41 +66,49 @@ export function Navbar() {
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.9 }}
                 >
-                  <Link to="home" spy={true} smooth={true}>
+                  <RSLink to="home" spy={true} smooth={true}>
                     <Button variant="ghost">Home</Button>
-                  </Link>
+                  </RSLink>
                 </motion.button>
                 <motion.button
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.9 }}
                 >
-                  <Link to="about" spy={true} smooth={true}>
+                  <RSLink to="about" spy={true} smooth={true}>
                     <Button variant="ghost">About</Button>
-                  </Link>
+                  </RSLink>
                 </motion.button>
                 <motion.button
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.9 }}
                 >
-                  <Link to="projects" spy={true} smooth={true}>
+                  <RSLink to="projects" spy={true} smooth={true}>
                     <Button variant="ghost">Projects</Button>
-                  </Link>
+                  </RSLink>
                 </motion.button>
                 <motion.button
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.9 }}
                 >
-                  <Link to="experience" spy={true} smooth={true}>
+                  <RSLink to="experience" spy={true} smooth={true}>
                     <Button variant="ghost">Experience</Button>
+                  </RSLink>
+                </motion.button>
+                <motion.button
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
+                >
+                  <Link href="/research" spy={true} smooth={true} isExternal>
+                    <Button variant="ghost">Research</Button>
                   </Link>
                 </motion.button>
                 <motion.button
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.9 }}
                 >
-                  <Link to="contact" spy={true} smooth={true}>
+                  <RSLink to="contact" spy={true} smooth={true}>
                     <Button variant="ghost">Contact</Button>
-                  </Link>
+                  </RSLink>
                 </motion.button>
                 <motion.button
                   whileHover={{ scale: 1.1 }}
@@ -144,31 +153,36 @@ export function Navbar() {
                     aria-label="Close menu"
                     onClick={mobileNav.onClose}
                   />
-                  <Link to="home" spy={true} smooth={true}>
+                  <RSLink to="home" spy={true} smooth={true}>
                     <Button w="full" variant="ghost">
                       Home
                     </Button>
-                  </Link>
-                  <Link to="about" spy={true} smooth={true}>
+                  </RSLink>
+                  <RSLink to="about" spy={true} smooth={true}>
                     <Button w="full" variant="ghost">
                       About
                     </Button>
-                  </Link>
-                  <Link to="projects" spy={true} smooth={true}>
+                  </RSLink>
+                  <RSLink to="projects" spy={true} smooth={true}>
                     <Button w="full" variant="ghost">
                       Projects
                     </Button>
-                  </Link>
-                  <Link to="experience" spy={true} smooth={true}>
+                  </RSLink>
+                  <RSLink to="experience" spy={true} smooth={true}>
                     <Button w="full" variant="ghost">
                       Experience
                     </Button>
+                  </RSLink>
+                  <Link to="/research" spy={true} smooth={true} isExternal>
+                    <Button w="full" variant="ghost">
+                      Research
+                    </Button>
                   </Link>
-                  <Link to="contact" spy={true} smooth={true}>
+                  <RSLink to="contact" spy={true} smooth={true}>
                     <Button w="full" variant="ghost">
                       Contact
                     </Button>
-                  </Link>
+                  </RSLink>
                   <IconButton
                     aria-label="toggle dark mode"
                     icon={colorMode === "dark" ? <SunIcon /> : <MoonIcon />}
