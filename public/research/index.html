@@ -1,5 +1,6 @@
 <!DOCTYPE HTML>
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<html lang="en"><head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
   <title>Zeeshan Patel</title>
   
@@ -28,14 +29,43 @@
         margin-left: auto;
         margin-right: auto;
       }
+
+    }
+
+    @media screen and (max-width: 768px) {
+      .intro-row {
+        /* For smaller screens, treat this row as a block 
+          so the cells stack vertically */
+        display: block;
+        margin-bottom: 20px; /* optional spacing */
+      }
+      .intro-row td {
+        display: block;
+        width: 100% !important;
+        margin: 10px 0;
+      }
+      /* Center the image (optional) */
+      .intro-row img {
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+      }
     }
   </style>
 </head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BB3K7090ET"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
+  gtag('config', 'G-BB3K7090ET');
+</script>
 
 <body>
   <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-    <tr style="padding:0px">
+    <tr style="padding:0px" class="research-project-row">
       <td style="padding:0px">
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
           <tr style="padding:0px">
@@ -59,9 +89,12 @@
                 <a href="https://scholar.google.com/citations?user=FTbkVd8AAAAJ&hl=en" target="_blank">Google Scholar</a>
               </p>
             </td>
+            <tr class="research-project-row" style="padding:0px">
             <td style="padding:2.5%;width:40%;max-width:40%">
-              <a href="images/zeeshan.JPG"><img style="width:100%;max-width:100%" alt="profile photo" src="images/zeeshan.JPG" class="hoverZoomLink"></a>
+              <a href="images/zeeshan.JPG">
+                  <img style="width:100%;max-width:100%" alt="profile photo" src="images/zeeshan.JPG" class="hoverZoomLink"></a>
             </td>
+          </tr>
           </tr>
         </tbody></table>
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
