@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const styles = {
   page: {
@@ -27,16 +27,17 @@ const styles = {
     flexWrap: 'wrap',
   },
   projectMedia: {
-    width: 160,
+    width: 200,
     flexShrink: 0,
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
   },
   projectImage: {
-    maxWidth: '100%',
+    width: '100%',
     borderRadius: 8,
     display: 'block',
+    objectFit: 'cover',
   },
   projectVideo: {
     maxWidth: '100%',
@@ -255,7 +256,7 @@ const publications = [
   },
 ];
 
-function ProjectCard({ project }) {
+function ProjectCard({ project, onImageClick }) {
   return (
     <div style={styles.projectCard}>
       {project.media && (
@@ -273,7 +274,8 @@ function ProjectCard({ project }) {
             <img
               src={project.media.src}
               alt={project.title}
-              style={styles.projectImage}
+              style={{ ...styles.projectImage, cursor: 'zoom-in' }}
+              onClick={() => onImageClick(project.media.src, project.title)}
             />
           )}
         </div>
@@ -310,20 +312,54 @@ function ProjectCard({ project }) {
   );
 }
 
+const lightboxStyles = {
+  overlay: {
+    position: 'fixed',
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
+    backgroundColor: 'rgba(0, 0, 0, 0.9)',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    zIndex: 1000,
+    cursor: 'zoom-out',
+    padding: 40,
+  },
+  image: {
+    maxWidth: '90%',
+    maxHeight: '90vh',
+    borderRadius: 8,
+    objectFit: 'contain',
+  },
+};
+
 export default function Projects() {
+  const [lightbox, setLightbox] = useState(null);
+
+  const openLightbox = (src, alt) => setLightbox({ src, alt });
+  const closeLightbox = () => setLightbox(null);
+
   return (
     <div style={styles.page}>
+      {lightbox && (
+        <div style={lightboxStyles.overlay} onClick={closeLightbox}>
+          <img src={lightbox.src} alt={lightbox.alt} style={lightboxStyles.image} />
+        </div>
+      )}
+
       <h1 style={styles.pageTitle}>Projects</h1>
-      <p style={styles.pageSubtitle}>Research and products in industry and academia.</p>
+      <p style={styles.pageSubtitle}>Research and products I've worked on in industry and academia.</p>
 
       <h2 style={styles.sectionHeader}>Foundation Models</h2>
       {foundationModels.map((project, i) => (
-        <ProjectCard key={i} project={project} />
+        <ProjectCard key={i} project={project} onImageClick={openLightbox} />
       ))}
 
       <h2 style={styles.sectionHeader}>Publications</h2>
       {publications.map((project, i) => (
-        <ProjectCard key={i} project={project} />
+        <ProjectCard key={i} project={project} onImageClick={openLightbox} />
       ))}
     </div>
   );
