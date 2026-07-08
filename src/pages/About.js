@@ -115,20 +115,23 @@ export default function About() {
       <div style={styles.section}>
         <h2 style={styles.sectionTitle}>About</h2>
         <p style={styles.paragraph}>
-          I am broadly interested in deep learning, generative models, and physical AI. Currently, I'm focusing on building AI systems that reason about the physical world and expand the physical economy.
+          I'm a founding Member of Technical Staff at <HoverLink href="https://prometheus.ai" style={styles.inlineLink}>Prometheus</HoverLink> building foundation models to accelerate the physical economy. My current focus is largely on pretraining recipe, scaling, and infrastructure. 
         </p>
         <p style={styles.paragraph}>
           Previously, I was a Member of Technical Staff at <HoverLink href="https://x.ai" style={styles.inlineLink}>xAI</HoverLink> focusing
           on multimodal, video generation, and world models. I was the first hire for video generation at xAI and co-led pretraining (data, infra, scaling) efforts to build <HoverLink href="https://grok.com/imagine" style={styles.inlineLink}>Grok Imagine</HoverLink>, the <HoverLink href="https://x.ai/news/grok-imagine-api" style={styles.inlineLink}>best video generation model of 2025</HoverLink>.
         </p>
         <p style={styles.paragraph}>
-          Prior to xAI, I worked on <HoverLink href="https://www.nvidia.com/en-us/ai/cosmos/" style={styles.inlineLink}>generative world models</HoverLink> at <HoverLink href="https://www.nvidia.com/en-us/research/" style={styles.inlineLink}>NVIDIA Research</HoverLink> and
-          foundation models at <HoverLink href="https://machinelearning.apple.com/" style={styles.inlineLink}>Apple AI/ML</HoverLink>.
+          Before xAI, I worked on the <HoverLink href="https://www.nvidia.com/en-us/ai/cosmos/" style={styles.inlineLink}>Cosmos world models</HoverLink> at <HoverLink href="https://www.nvidia.com/en-us/research/" style={styles.inlineLink}>NVIDIA Research</HoverLink> and helped train the first generation of
+          LLMs at <HoverLink href="https://machinelearning.apple.com/" style={styles.inlineLink}>Apple AI/ML</HoverLink>.
         </p>
         <p style={styles.paragraph}>
           I graduated with an M.S. in EECS from UC Berkeley advised
           by <HoverLink href="https://people.eecs.berkeley.edu/~efros/" style={styles.inlineLink}>Professor Alexei Efros</HoverLink> and <HoverLink href="https://people.eecs.berkeley.edu/~malik/" style={styles.inlineLink}>Professor Jitendra Malik</HoverLink> at <HoverLink href="https://bair.berkeley.edu/" style={styles.inlineLink}>Berkeley Artificial Intelligence Research (BAIR)</HoverLink>.
           I also graduated with honors from UC Berkeley with a Bachelor's in CS & Statistics.
+        </p>
+        <p style={styles.paragraph}>
+          I'm broadly interested in deep learning, generative models, and physical AI. Feel free to reach out if you'd like to chat about research or potential collaborations.
         </p>
       </div>
     </div>
